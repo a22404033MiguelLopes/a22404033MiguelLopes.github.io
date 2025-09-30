@@ -34,7 +34,7 @@ section {
   color: #111;              
   background:
     linear-gradient(0deg, rgba(255,255,255,.45), rgba(255,255,255,.45)),
-    url("images/hero.jpg") center/cover no-repeat;
+    url("https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg") center/cover no-repeat;
 }
 
 .hero-nav {
