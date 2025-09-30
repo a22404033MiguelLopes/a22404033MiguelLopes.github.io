@@ -1,47 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="utf-8">
-    <title>Primeira Página</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8" />
+  <title>Lab 3 — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<header>
-    <h1>Primeira Página Web!</h1>
-</header>
-
-<main>
-    <p>Eis a minha primeira página Web!</p>
-    <p>
-        Na Unidade Curricular de 
-        <a href="https://moodle.ensinolusofona.pt/course/view.php?id=11232" target="_blank">
-            Desenvolvimento de Interfaces Web
-        </a>
-        abordaremos as seguintes tecnologias Web &#127760;:
-    </p>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React e Next.js</li>
-    </ul>
-
-    <p>Iremos criar soluções criativas!</p>
-
-    <nav>
-        <ul>
-            <li><a href="lab1/index.html">Lab1</a></li>
-            <li><a href="lab2/index.html">Lab2</a></li>
-        </ul>
+  <section id="inicio" class="hero">
+    <nav class="hero-nav" aria-label="Navegação principal">
+      <ul>
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#cadeira">Interfaces Web</a></li>
+      </ul>
     </nav>
 
-    <img src="imagens/diw.svg" alt="Desenvolvimento de Interfaces Web">
-</main>
+    <div class="hero-content">
+      <h1>Miguel Lopes é um<br>programador que desenvolve<br>aplicações web criativas</h1>
+      <a class="btn" href="#projetos">Ver projetos</a>
+    </div>
+  </section>
 
-<footer>
-    <p>Universidade Lusófona © 2025</p>
-</footer>
+  <section id="projetos" class="projetos">
+    <div class="wrapper">
+      <header class="section-head">
+        <h2>Projetos / Labs</h2>
+        <p>Alguns exercícios desenvolvidos ao longo da UC.</p>
+      </header>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Lab 1</h3>
+          <p>Estrutura base e semântica.</p>
+          <a class="card-link" href="../lab1/index.html">Abrir Lab 1</a>
+        </article>
+
+        <article class="card">
+          <h3>Lab 2</h3>
+          <p>Estilos e layout responsivo.</p>
+          <a class="card-link" href="../lab2/index.html">Abrir Lab 2</a>
+        </article>
+
+        <article class="card">
+          <h3>Lab 3</h3>
+          <p>Interatividade com JS.</p>
+          <a class="card-link" href="../lab3/index.html">Abrir Lab 3</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="cadeira" class="disciplina">
+    <div class="wrapper">
+      <header class="section-head">
+        <h2>Interfaces Web</h2>
+        <p>Sobre a disciplina e tecnologias abordadas.</p>
+      </header>
+
+      <div class="disciplina-grid">
+        <div class="texto">
+          <p>
+            Na Unidade Curricular de Desenvolvimento de Interfaces Web
+            abordamos HTML, CSS, JavaScript, React e Next.js. Focamos boas
+            práticas de semântica, acessibilidade, responsividade e padrões de
+            UI modernos.
+          </p>
+          <ul>
+            <li>Estruturar páginas semânticas (HTML5)</li>
+            <li>Estilizar interfaces (CSS/Flex/Grid)</li>
+            <li>Tornar páginas interativas (JavaScript)</li>
+            <li>Componentização (React/Next.js)</li>
+          </ul>
+        </div>
+
+        <div class="media">
+          <img src="imagens/diw.svg" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
 
 </body>
 </html>
