@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lab — Eventos básicos</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="scripts/main.js"></script>
+</head>
+<body>
+  <header>
+    <h1>JS - LAB4 </h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. Passa por aqui!</h2>
+      <div id="zona" onmouseover="entra()" onmouseout="sai()" onmousemove="move()">
+        <span id="txt1">Entra com o rato…</span>
+        <small id="coords"></small>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. <span id="alvo">Pinta-me!</span></h2>
+      <button onclick="pintaRed()">Red</button>
+      <button onclick="pintaGreen()">Green</button>
+      <button onclick="pintaBlue()">Blue</button>
+      <button onclick="pintaReset()">Reset</button>
+    </section>
+
+    <section>
+      <h2>3. Experimenta escrever…</h2>
+      <input id="teclado" onkeyup="mudaInput()" placeholder="cada tecla muda a cor">
+    </section>
+
+    <section>
+      <h2>4. Escolha uma cor em inglês:</h2>
+      <form onsubmit="return mudaPagina()">
+        <input id="cor" value="white">
+        <button type="submit">submeter</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>5. Contador</h2>
+      <button onclick="conta()">Conta!</button>
+      <span id="resultado" ondblclick="resetContador()">0</span>
+      <small>(duplo clique no número para reset)</small>
+    </section>
+
+    <section>
+      <h2>Imagem</h2>
+      <img id="foto"
+           src="https://picsum.photos/id/1069/600/300"
+           alt="Paisagem"
+           onmouseover="imgOver()"
+           onmouseout="imgOut()">
+    </section>
+  </main>
+
+  <footer>
+    <p>LAB 4</p>
+  </footer>
+</body>
+</html>
