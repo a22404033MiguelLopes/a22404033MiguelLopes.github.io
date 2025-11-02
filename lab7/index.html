@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <title>Loja</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Loja</h1>
+    <nav aria-label="principal">
+      <ul>
+        <li><a href="#produtos">Produtos</a></li>
+        <li><a href="#cesto">Cesto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="produtos">
+      <h2>Selecione os seus Produtos</h2>
+
+      <div class="toolbar" role="group" aria-label="Filtros e pesquisa">
+        <label for="filtro-categoria">Filtrar:</label>
+        <select id="filtro-categoria">
+          <option value="">Todas as categorias</option>
+        </select>
+
+        <label for="ordenar">Ordenar:</label>
+        <select id="ordenar">
+          <option value="">Ordenar pelo preço</option>
+          <option value="asc">Preço Crescente</option>
+          <option value="desc">Preço Decrescente</option>
+        </select>
+
+        <label for="pesquisar">Procurar</label>
+        <input id="pesquisar" type="text" placeholder="pesquise por produto" />
+      </div>
+
+
+
+      <div id="grade-produtos"></div>
+
+    </section>
+
+    <section id="cesto">
+      <h2>Produtos Selecionados</h2>
+
+      <section id="lista-cesto" aria-live="polite"></section>
+
+      <p id="total-cesto">Total: 0 €</p>
+      <p><button id="limpar-cesto" type="button">Limpar Cesto</button></p>
+
+      <div id="checkout" class="card">
+      <h3>Finalizar compra</h3>
+
+      <form id="form-checkout" onsubmit="event.preventDefault(); comprar();">
+        <div class="grid">
+          <div class="group">
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" placeholder="o seu nome" />
+          </div>
+
+          <div class="group">
+            <label for="coupon">Cupão de desconto</label>
+            <div class="input-row">
+              <input id="coupon" type="text" placeholder="ex.: black-friday" />
+            </div>
+          </div>
+
+          <div class="group checkbox">
+            <input id="student" type="checkbox" />
+            <label for="student">Sou estudante do DEISI</label>
+          </div>
+        </div>
+
+        <div class="checkout-footer">
+          <button id="comprar" type="submit" class="btn-primary">Comprar</button>
+        </div>
+
+        <div id="resultado-compra" aria-live="polite"></div>
+      </form>
+    </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>2025</small>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
