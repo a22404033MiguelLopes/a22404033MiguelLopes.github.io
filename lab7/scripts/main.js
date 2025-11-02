@@ -164,7 +164,6 @@ function comprar() {
     coupon: (document.getElementById("coupon").value || "").trim(),
     name: (document.getElementById("nome").value || "Cliente").trim()
   };
-  
 
   document.getElementById("resultado-compra").textContent = "A processar compra...";
   btn.disabled = true;
@@ -182,4 +181,6 @@ function comprar() {
       mostrarErro(data.error || ("Erro " + res.status));
     }
   })
+  .catch(() => mostrarErro("Falha de rede."))
+  .finally(() => { btn.disabled = false; });
 }
